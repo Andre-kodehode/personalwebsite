@@ -3,11 +3,12 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 
 type Props = {
-  params: { project: string };
+  params: Promise<{ slug: string }>;
 };
 
 export default async function Project({ params }: Props) {
-  const slug = params.project;
+  const { slug } = await params;
+
   const project = await GetProject(slug);
 
   return (
