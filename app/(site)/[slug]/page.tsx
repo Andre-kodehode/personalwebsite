@@ -1,9 +1,12 @@
 import { getPage } from "@/sanity/schemas/sanity-utils";
 import { PortableText } from "next-sanity";
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const page = await getPage(params.slug);
+type Props = {
+  params: { slug: string };
+};
 
+export default async function Page({ params }: Props) {
+  const page = await getPage(params.slug);
   return (
     <div>
       <h1 className="bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 bg-clip-text text-transparent text-5xl drop-shadow font-extrabold">
