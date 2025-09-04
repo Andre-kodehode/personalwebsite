@@ -1,5 +1,4 @@
 import { getProjects } from "@/sanity/schemas/sanity-utils";
-import { Project } from "@/types/Project";
 import Image from "next/image";
 import Link from "next/link";
 
