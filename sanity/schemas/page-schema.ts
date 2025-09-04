@@ -1,5 +1,3 @@
-import { title } from "process";
-
 const Page = {
   name: "page",
   title: "Pages",
